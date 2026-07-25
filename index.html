@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Charlie Fuller — AI platforms, evaluation engines, governed legal systems, voice pipelines, workflow automation. 6 platforms, 50+ AI agents, 132 visual explainers.">
+<title>Charlie Fuller</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --bg: #080c12;
+  --surface: #0f1621;
+  --surface2: #141d2b;
+  --surface-elevated: #192436;
+  --border: rgba(255,255,255,0.06);
+  --border-bright: rgba(255,255,255,0.10);
+  --text: #e4e0d8;
+  --text-dim: #8a8f98;
+  --text-muted: #545a64;
+
+  --gold: #c9a84c; --gold-bright: #e4c76b; --gold-dim: rgba(201,168,76,0.10);
+  --aesop: #f59e0b; --aesop-dim: rgba(245,158,11,0.10);
+  --legal: #60a5fa; --legal-dim: rgba(96,165,250,0.10);
+  --tbg: #4ade80; --tbg-dim: rgba(74,222,128,0.10);
+  --diagrams: #a78bfa; --diagrams-dim: rgba(167,139,250,0.10);
+  --skills: #fb7185; --skills-dim: rgba(251,113,133,0.10);
+  --automation: #2dd4bf; --automation-dim: rgba(45,212,191,0.10);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f5f0; --surface: #ffffff; --surface2: #f8f6f2; --surface-elevated: #faf8f4;
+    --border: rgba(0,0,0,0.06); --border-bright: rgba(0,0,0,0.10);
+    --text: #1a1814; --text-dim: #6b6860; --text-muted: #9c978e;
+    --gold: #8b6914; --gold-bright: #a67c1e;
+  }
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, var(--aesop-dim) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 10%, var(--legal-dim) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, var(--tbg-dim) 0%, transparent 50%);
+  color: var(--text); font-family: var(--font-body);
+  font-size: 15px; line-height: 1.6;
+  min-height: 100vh; -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(16px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+section, .hero, .mega-stats { animation: fadeUp 0.5s ease both; }
+.hero              { animation-delay:0.00s; }
+.mega-stats        { animation-delay:0.05s; }
+section:nth-child(3){ animation-delay:0.10s; }
+section:nth-child(4){ animation-delay:0.15s; }
+section:nth-child(5){ animation-delay:0.20s; }
+section:nth-child(6){ animation-delay:0.25s; }
+section:nth-child(7){ animation-delay:0.30s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:0.01ms !important; animation-delay:0ms !important; }
+}
+
+.container { max-width:1040px; margin:0 auto; padding:48px 24px 80px; }
+
+/* ============ HERO ============ */
+.hero { text-align:center; padding:56px 0 48px; }
+.hero-kicker {
+  font-family:var(--font-mono); font-size:12px; font-weight:700;
+  letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--gold-bright); margin-bottom:16px;
+}
+.hero h1 {
+  font-family:var(--font-heading); font-size:56px; font-weight:900;
+  letter-spacing:-1.5px; line-height:1.1; margin-bottom:14px;
+}
+.hero h1 .accent {
+  background:linear-gradient(135deg, var(--gold-bright), #f59e0b, #60a5fa);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.hero-sub {
+  font-size:18px; color:var(--text-dim); max-width:620px; margin:0 auto 24px;
+  line-height:1.55;
+}
+.hero-links {
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+}
+.hero-link {
+  font-family:var(--font-mono); font-size:12px; font-weight:600;
+  text-decoration:none; padding:10px 20px; border-radius:8px;
+  border:1px solid var(--border-bright); color:var(--text-dim);
+  background:var(--surface2); transition: all 0.2s;
+}
+.hero-link:hover { border-color:var(--gold); color:var(--gold-bright); background:var(--gold-dim); }
+.hero-link--primary {
+  background:var(--gold-dim); border-color:var(--gold); color:var(--gold-bright);
+}
+.hero-link--primary:hover { background:rgba(201,168,76,0.2); }
+
+/* ============ MEGA STATS ============ */
+.mega-stats {
+  display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-bottom:48px;
+}
+.mega-stat {
+  background:var(--surface-elevated); border:1px solid var(--border);
+  border-radius:12px; padding:20px 12px; text-align:center;
+}
+.mega-stat__value {
+  font-family:var(--font-heading); font-size:35px; font-weight:800;
+  color:var(--gold-bright); line-height:1.1; letter-spacing:-0.5px;
+}
+.mega-stat__label {
+  font-family:var(--font-mono); font-size:10px; font-weight:600;
+  text-transform:uppercase; letter-spacing:1px; color:var(--text-muted);
+  margin-top:6px; line-height:1.4;
+}
+
+/* ============ SECTION ============ */
+section { margin-bottom:40px; }
+.section-label {
+  font-family:var(--font-mono); font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.14em; margin-bottom:8px;
+}
+.section-title {
+  font-family:var(--font-heading); font-size:27px; font-weight:700;
+  margin-bottom:14px; letter-spacing:-0.3px; line-height:1.2;
+}
+.section-body {
+  font-size:16px; color:var(--text-dim); line-height:1.7; margin-bottom:18px;
+}
+.section-body strong { color:var(--text); }
+
+/* ============ PLATFORM CARD ============ */
+.platform {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:16px; padding:28px 32px; margin-bottom:20px;
+}
+.platform--aesop { border-left:4px solid var(--aesop); }
+.platform--legal { border-left:4px solid var(--legal); }
+.platform--tbg   { border-left:4px solid var(--tbg); }
+.platform--diagrams { border-left:4px solid var(--diagrams); }
+.platform--skills { border-left:4px solid var(--skills); }
+.platform--auto  { border-left:4px solid var(--automation); }
+
+.platform-header {
+  display:flex; align-items:baseline; gap:12px; margin-bottom:10px; flex-wrap:wrap;
+}
+.platform-num {
+  font-family:var(--font-mono); font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.1em;
+}
+.platform--aesop .platform-num { color:var(--aesop); }
+.platform--legal .platform-num { color:var(--legal); }
+.platform--tbg .platform-num   { color:var(--tbg); }
+.platform--diagrams .platform-num { color:var(--diagrams); }
+.platform--skills .platform-num { color:var(--skills); }
+.platform--auto .platform-num  { color:var(--automation); }
+
+.platform-title {
+  font-family:var(--font-heading); font-size:23px; font-weight:700;
+}
+.platform-sub {
+  font-size:15px; color:var(--text-dim); line-height:1.6; margin-bottom:16px;
+}
+.platform-sub strong { color:var(--text); }
+
+.stat-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+.stat-pill {
+  font-family:var(--font-mono); font-size:11px; font-weight:600;
+  padding:3px 10px; border-radius:5px; white-space:nowrap;
+  border:1px solid var(--border); color:var(--text-dim);
+}
+.platform--aesop .stat-pill { border-color:var(--aesop-dim); color:var(--aesop); }
+.platform--legal .stat-pill { border-color:var(--legal-dim); color:var(--legal); }
+.platform--tbg .stat-pill   { border-color:var(--tbg-dim); color:var(--tbg); }
+.platform--diagrams .stat-pill { border-color:var(--diagrams-dim); color:var(--diagrams); }
+.platform--skills .stat-pill { border-color:var(--skills-dim); color:var(--skills); }
+.platform--auto .stat-pill  { border-color:var(--automation-dim); color:var(--automation); }
+
+.key-points {
+  display:grid; grid-template-columns:1fr 1fr; gap:6px 24px;
+}
+.key-point {
+  font-size:14px; color:var(--text-dim); line-height:1.55;
+  padding-left:16px; position:relative;
+}
+.key-point::before {
+  content:'';
+  position:absolute; left:0; top:7px;
+  width:6px; height:6px; border-radius:50%;
+}
+.platform--aesop .key-point::before { background:var(--aesop); }
+.platform--legal .key-point::before { background:var(--legal); }
+.platform--tbg .key-point::before   { background:var(--tbg); }
+.platform--diagrams .key-point::before { background:var(--diagrams); }
+.platform--skills .key-point::before { background:var(--skills); }
+.platform--auto .key-point::before  { background:var(--automation); }
+
+/* ============ DUAL COLUMN ============ */
+.dual { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.dual-card {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:12px; padding:22px 24px;
+}
+.dual-card__title {
+  font-family:var(--font-heading); font-size:19px; font-weight:700; margin-bottom:10px;
+}
+.dual-list {
+  list-style:none; font-size:14px; line-height:1.9;
+}
+.dual-list li {
+  padding-left:16px; position:relative; color:var(--text-dim);
+}
+.dual-list li::before {
+  content:'›'; position:absolute; left:0; color:var(--text-muted); font-weight:600;
+}
+.dual-list li strong { color:var(--text); }
+
+/* ============ CAPABILITY GRID ============ */
+.cap-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.cap-card {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:10px; padding:16px 18px; text-align:center;
+}
+.cap-card__title {
+  font-size:15px; font-weight:700; margin-bottom:6px;
+}
+.cap-card__desc {
+  font-size:13px; color:var(--text-dim); line-height:1.5;
+}
+
+/* ============ STACK TAGS ============ */
+.tags { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:6px; }
+.tag {
+  font-family:var(--font-mono); font-size:11px; padding:4px 10px;
+  border-radius:5px; border:1px solid var(--border);
+  background:var(--surface2); color:var(--text-dim);
+}
+
+/* ============ CONTACT ============ */
+.contact {
+  text-align:center; padding:40px 0; border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border); margin-bottom:40px;
+}
+.contact-title {
+  font-family:var(--font-heading); font-size:23px; font-weight:700; margin-bottom:8px;
+}
+.contact-sub {
+  font-size:15px; color:var(--text-dim); margin-bottom:18px;
+}
+.contact-links {
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+}
+.contact-link {
+  font-family:var(--font-mono); font-size:12px; font-weight:600;
+  text-decoration:none; padding:8px 18px; border-radius:6px;
+  border:1px solid var(--border-bright); color:var(--text-dim);
+  background:var(--surface2); transition: all 0.2s;
+}
+.contact-link:hover { border-color:var(--gold); color:var(--gold-bright); background:var(--gold-dim); }
+
+/* ============ PRINCIPLES ============ */
+.principles {
+  text-align:center; max-width:720px; margin:0 auto;
+}
+.principles-quote {
+  font-family:var(--font-heading); font-size:20px; color:var(--text-dim);
+  font-style:italic; line-height:1.7; margin-bottom:20px;
+}
+.principles-list {
+  display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+}
+.principle {
+  font-family:var(--font-mono); font-size:11px; font-weight:600;
+  padding:6px 14px; border-radius:20px;
+  border:1px solid var(--border-bright); color:var(--text-dim);
+  background:var(--surface2);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px) {
+  .mega-stats { grid-template-columns:repeat(3,1fr); }
+  .key-points, .dual, .cap-grid { grid-template-columns:1fr; }
+  .hero h1 { font-size:37px; }
+  .section-title { font-size:23px; }
+  .platform { padding:20px; }
+}
+@media (max-width:500px) {
+  .mega-stats { grid-template-columns:1fr 1fr; }
+  .hero h1 { font-size:29px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ====== HERO ====== -->
+  <div class="hero">
+    <div class="hero-kicker">Charlie Fuller</div>
+    <h1>AI platforms <span class="accent">that ship</span></h1>
+    <p class="hero-sub">I build multi-agent systems, evaluation engines, and governed AI platforms. 6 production platforms, 50+ agents, 1,050+ tests, and 132 visual explainers — deployed across Fly.io, Railway, Vercel, and Supabase.</p>
+    <div class="hero-links">
+      <a href="#work" class="hero-link hero-link--primary">See the work ↓</a>
+      <a href="diagrams/portfolio-full-showcase.html" class="hero-link">Full showcase →</a>
+      <a href="diagrams/" class="hero-link">Visual explainers →</a>
+    </div>
+  </div>
+
+  <!-- ====== MEGA STATS ====== -->
+  <div class="mega-stats">
+    <div class="mega-stat"><div class="mega-stat__value">6</div><div class="mega-stat__label">Platforms</div></div>
+    <div class="mega-stat"><div class="mega-stat__value">50+</div><div class="mega-stat__label">AI Agents</div></div>
+    <div class="mega-stat"><div class="mega-stat__value">1,050+</div><div class="mega-stat__label">Tests</div></div>
+    <div class="mega-stat"><div class="mega-stat__value">132</div><div class="mega-stat__label">Explainers</div></div>
+    <div class="mega-stat"><div class="mega-stat__value">100+</div><div class="mega-stat__label">API Routes</div></div>
+    <div class="mega-stat"><div class="mega-stat__value">76</div><div class="mega-stat__label">DB Migrations</div></div>
+  </div>
+
+  <!-- ====== 1. AESOP ====== -->
+  <section id="work">
+    <div class="section-label" style="color:var(--aesop);">Platform 1</div>
+    <div class="section-title">AESOP Transformation OS</div>
+    <div class="section-body">Full-lifecycle AI agent development platform. <strong>Discover → Design → Build → Evaluate → Repair → Track.</strong> The evaluation engine that powers independent AI assessment across multiple platforms.</div>
+
+    <div class="platform platform--aesop">
+      <div class="platform-header">
+        <span class="platform-num">50 agents · 75 API routes · 76 migrations · ~990 tests</span>
+      </div>
+      <div class="platform-title">The Evaluation Engine</div>
+      <div class="platform-sub">The hardest problem in AI: <strong>how do you evaluate an AI agent when the agent cannot be trusted to self-assess?</strong> AESOP answers with 20+ specialized evaluation agents, each scoring a different dimension — then a programmatic scoring engine applies weighted tiers, veto rules, and certification levels. No LLM self-assessment. Every score is auditable.</div>
+
+      <div class="stat-row">
+        <span class="stat-pill">20+ evaluation agents</span>
+        <span class="stat-pill">6-stage pipeline</span>
+        <span class="stat-pill">Scoring: 4 dimensions + veto</span>
+        <span class="stat-pill">Cave of Shadows (red-team)</span>
+        <span class="stat-pill">The Hydra (parallelized swarm)</span>
+        <span class="stat-pill">Bias Probe (differential testing)</span>
+        <span class="stat-pill">Sentinel (QA test gen)</span>
+        <span class="stat-pill">Drift Detection (6 types)</span>
+        <span class="stat-pill">RAG Help System (pgvector)</span>
+        <span class="stat-pill">Custom Rubric engine</span>
+        <span class="stat-pill">Black Box Investigation</span>
+        <span class="stat-pill">Forge Repair agent</span>
+      </div>
+
+      <div class="key-points">
+        <div class="key-point">6-stage pipeline from discovery through production monitoring</div>
+        <div class="key-point">Scoring engine: Tier 1 (1.5×) + Tier 2 (1.0×), hard veto at 75</div>
+        <div class="key-point">Cave of Shadows: adversarial red-team with attack personas</div>
+        <div class="key-point">Hydra: parallelized swarm running dozens of test scenarios simultaneously</div>
+        <div class="key-point">Bias Probe: paired differential testing detecting treatment disparity</div>
+        <div class="key-point">Sentinel: generates dual-output QA test plans from evaluation results</div>
+        <div class="key-point">Drift Detection: 6 drift types, weekly sweeps, severity alerts</div>
+        <div class="key-point">Build pipeline: 6-phase automated agent generation with HITL checkpoint</div>
+        <div class="key-point">Portfolio layer: department Kanban, strategic prioritization agent, CSV imports</div>
+        <div class="key-point">Monday.com integration: MCP client, direct PRD endpoint, argument mapping</div>
+        <div class="key-point">Backend: FastAPI + Supabase + Celery | Frontend: Next.js 16 + TypeScript</div>
+        <div class="key-point">Deployed: Fly.io + Vercel | ~990 tests passing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 2. LEGAL AI OS ====== -->
+  <section>
+    <div class="section-label" style="color:var(--legal);">Platform 2</div>
+    <div class="section-title">Legal AI Operating System</div>
+    <div class="section-body">A governed platform for building, deploying, measuring, and independently evaluating AI across the legal enterprise. <strong>Built for the K&I Program Manager role at Ashurst Perkins Coie.</strong></div>
+
+    <div class="platform platform--legal">
+      <div class="platform-header">
+        <span class="platform-num">9 functions · 10 API routes · 9 migrations · 62 tests</span>
+      </div>
+      <div class="platform-title">Governance Architecture + Harvey Monitoring</div>
+      <div class="platform-sub">Five-layer operating model: Knowledge Foundation → Governance & Trust → AI Functions → Program Operations → Organizational Model. The breakthrough: <strong>independent Harvey agent evaluation</strong> — ported from the AESOP scoring engine, adapted for legal outputs. Harvey can't grade its own homework. Legal-OS does.</div>
+
+      <div class="stat-row">
+        <span class="stat-pill">9 AI functions deployed</span>
+        <span class="stat-pill">Harvey Agent Monitoring</span>
+        <span class="stat-pill">4-dim evaluation (ported from AESOP)</span>
+        <span class="stat-pill">ROI Framework: time × rate</span>
+        <span class="stat-pill">POC Pipeline (Kanban)</span>
+        <span class="stat-pill">Agentic Help System (RAG)</span>
+        <span class="stat-pill">Portfolio Dashboard</span>
+        <span class="stat-pill">Enablement Kit (7 docs)</span>
+        <span class="stat-pill">RLS client isolation</span>
+        <span class="stat-pill">ABA 512 compliance ready</span>
+      </div>
+
+      <div class="key-points">
+        <div class="key-point">5-layer architecture: Knowledge, Governance, Functions, Operations, Org Model</div>
+        <div class="key-point">Harvey evaluation: external agents pulled in, 4 parallel scorers, weighted + veto</div>
+        <div class="key-point">ROI Framework: cost avoided = time saved × billable rate from rate cards</div>
+        <div class="key-point">POC Pipeline: Kanban board — Discovery → Build → Review → Graduated/Cancelled</div>
+        <div class="key-point">Agentic help system: Voyage embeddings → pgvector → RAG answers (89 chunks)</div>
+        <div class="key-point">Audit trail: append-only, immutable, every LLM call recorded</div>
+        <div class="key-point">Provider resilience: tries Anthropic first, auto-falls-back to DeepSeek</div>
+        <div class="key-point">Backend: FastAPI + Supabase + Celery | Frontend: Next.js 16 + TypeScript</div>
+        <div class="key-point">Deployed: Fly.io + Vercel | 52 backend + 18 E2E tests passing</div>
+        <div class="key-point">Matter Intake Evaluator: standalone AI-powered legal matter triage (Perkins Coie demo)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 3. TBG / SUPERASSISTANT ====== -->
+  <section>
+    <div class="section-label" style="color:var(--tbg);">Platform 3 &amp; 4</div>
+    <div class="section-title">SuperAssistant &amp; TSE — Voice + Workflow AI</div>
+    <div class="section-body">AI assistant platform for The Bradbury Group. <strong>Voice interview pipeline, email automation, and workflow orchestration</strong> — serverless architecture across Railway, Supabase, and ElevenLabs.</div>
+
+    <div class="dual">
+      <div class="dual-card">
+        <div class="dual-card__title">SuperAssistant MVP</div>
+        <ul class="dual-list">
+          <li>Executive AI assistant configured through 5-minute voice interview</li>
+          <li>RAG-powered with Claude + ElevenLabs</li>
+          <li>39 API route files across backend</li>
+          <li>Multi-tenant architecture on Railway + Supabase</li>
+          <li>Structured output pipelines for agent orchestration</li>
+        </ul>
+      </div>
+      <div class="dual-card">
+        <div class="dual-card__title">TSE — Voice Interview Pipeline</div>
+        <ul class="dual-list">
+          <li>Serverless voice interviews via ElevenLabs</li>
+          <li>Structured question flow with branching logic</li>
+          <li>Real-time transcription + analysis</li>
+          <li>Deployed on Railway + Supabase</li>
+          <li>Fully automated end-to-end interview pipeline</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="platform platform--tbg" style="margin-top:16px;">
+      <div class="platform-title">TBG Automations</div>
+      <div class="platform-sub">Operational AI for a consulting firm — turning manual workflows into automated pipelines.</div>
+      <div class="key-points">
+        <div class="key-point">L&D Cohort Automation: end-to-end training program automation through Sprint 9</div>
+        <div class="key-point">Gmail Automation: AI email triage using Gemini + Gmail API</div>
+        <div class="key-point">System Instructions: central source of truth for all TBG AI system instructions</div>
+        <div class="key-point">Ecosystem Map: operational overview of all Railway/Vercel/Supabase/Cloudflare deployments</div>
+        <div class="key-point">Walter: fully TBG-owned AI assistant, deployed and operational</div>
+        <div class="key-point">Matter Intake Evaluator: standalone AI legal triage for Perkins Coie</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 4. THESIS ====== -->
+  <section>
+    <div class="section-label" style="color:var(--automation);">Platform 5</div>
+    <div class="section-title">Thesis — Multi-Agent Strategy Platform</div>
+    <div class="section-body">A GenAI strategy platform with <strong>21 specialized agents, autonomous discussion rooms, Neo4j stakeholder graphs, and Mem0 memory</strong> — the most architecturally complex project in the portfolio.</div>
+
+    <div class="platform platform--auto">
+      <div class="platform-header">
+        <span class="platform-num">21 agents · Neo4j + Mem0 · Meeting Room · Stakeholder Graphs</span>
+      </div>
+      <div class="platform-title">Autonomous Strategy Generation</div>
+      <div class="platform-sub">Agents don't just answer — they <strong>discuss</strong>. The Meeting Room runs autonomous multi-agent discussions where specialized agents debate, challenge, and synthesize strategy. Stakeholder graphs map organizational power structures. Mem0 provides persistent memory across sessions.</div>
+
+      <div class="stat-row">
+        <span class="stat-pill">21 specialized agents</span>
+        <span class="stat-pill">Neo4j stakeholder graphs</span>
+        <span class="stat-pill">Mem0 persistent memory</span>
+        <span class="stat-pill">Autonomous meeting room</span>
+        <span class="stat-pill">Multi-agent discussion</span>
+        <span class="stat-pill">Backend: Fly.io</span>
+        <span class="stat-pill">Frontend: Vercel</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 5. DIAGRAMS & VISUAL COMMUNICATION ====== -->
+  <section>
+    <div class="section-label" style="color:var(--diagrams);">Visual Communication</div>
+    <div class="section-title">132 Visual Explainers</div>
+    <div class="section-body">Self-contained HTML pages — architecture diagrams, maturity models, process maps, audit reports, platform showcases — spanning every project. <strong>No frameworks. No build step. Just hand-built HTML + CSS that renders instantly.</strong></div>
+
+    <div class="platform platform--diagrams">
+      <div class="stat-row">
+        <span class="stat-pill">30 AESOP diagrams</span>
+        <span class="stat-pill">19 Legal OS diagrams</span>
+        <span class="stat-pill">TBG architecture & audits</span>
+        <span class="stat-pill">Monday.com pipeline (6 stages)</span>
+        <span class="stat-pill">Executive one-pagers</span>
+        <span class="stat-pill">Maturity models</span>
+        <span class="stat-pill">Platform showcases</span>
+        <span class="stat-pill">Process flowcharts</span>
+        <span class="stat-pill">Dark/light theme on every page</span>
+        <span class="stat-pill">Mermaid integration</span>
+      </div>
+      <div class="key-points">
+        <div class="key-point"><a href="diagrams/" style="color:var(--diagrams);text-decoration:underline;">Browse the gallery →</a> — 132 visual explainers, live at motorthings.github.io/diagrams</div>
+        <div class="key-point"><a href="diagrams/portfolio-full-showcase.html" style="color:var(--diagrams);text-decoration:underline;">Full portfolio showcase →</a> — every platform in detail</div>
+        <div class="key-point">Custom visual-explainer skill: 4 templates, 3 rendering approaches, responsive design</div>
+        <div class="key-point">Mermaid integration: flowcharts, sequence, ER, state machines, mind maps</div>
+        <div class="key-point">Dark/light theme support on every page with persisted preference</div>
+        <div class="key-point">Executive, technical, and operational views for every platform</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 6. SKILLS & AGENTS ====== -->
+  <section>
+    <div class="section-label" style="color:var(--skills);">AI Skills &amp; Agents</div>
+    <div class="section-title">Custom Claude Infrastructure</div>
+    <div class="section-body">Skills, agents, and tools that extend Claude Code into a <strong>specialized development and analysis environment</strong> — each with defined prompts, knowledge bases, and evaluation criteria.</div>
+
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-card__title">Visual Explainer Skill</div>
+        <div class="cap-card__desc">Generates self-contained HTML diagrams. 4 template types, 7 aesthetic palettes, Mermaid + CSS + Chart.js. The skill that built all 132 explainers.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">PRD Skill</div>
+        <div class="cap-card__desc">Socratic discovery across 4 depth levels, 7 phases, 6 reference files. Generates complete PRDs from structured interviews.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Transcript Analysis</div>
+        <div class="cap-card__desc">Transforms meeting transcripts into structured discovery reports. Explicit + implicit signal detection. Stakeholder mapping.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Brand Voice</div>
+        <div class="cap-card__desc">Edgy, brutal-honest, poetic style. Tension/release rhythm. Applied to LinkedIn content, professional writing, and platform copy.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Thinking Partner Agent</div>
+        <div class="cap-card__desc">Socratic reasoning partner. Challenges assumptions. Maps trade-offs. Structured decision analysis.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">15+ Specialized Agents</div>
+        <div class="cap-card__desc">Research assistant, interviewer, daily summarizer, chat archiver, project triage, career guidance, and more.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PATTERNS ====== -->
+  <section>
+    <div class="section-label" style="color:var(--text-muted);">Cross-Cutting</div>
+    <div class="section-title">Patterns That Span Every Project</div>
+    <div class="section-body">These patterns appear across every platform — they're not one-off implementations but <strong>reusable architectural primitives</strong> ported between projects.</div>
+
+    <div class="dual">
+      <div class="dual-card">
+        <div class="dual-card__title">Multi-Agent Evaluation</div>
+        <ul class="dual-list">
+          <li><strong>Built in AESOP, ported to Legal-OS</strong></li>
+          <li>Parallel evaluator agents — each scores a different dimension</li>
+          <li>Programmatic scoring engine — never trusts LLM self-assessment</li>
+          <li>Weighted tiers + hard veto + certification levels</li>
+          <li>Drift detection with baseline comparison and severity alerts</li>
+        </ul>
+      </div>
+      <div class="dual-card">
+        <div class="dual-card__title">RAG Help Systems</div>
+        <ul class="dual-list">
+          <li><strong>Built in both AESOP and Legal-OS</strong></li>
+          <li>Voyage AI embeddings → pgvector similarity search</li>
+          <li>LLM-generated answers with source references</li>
+          <li>Slide-out chat panel with suggested questions</li>
+          <li>Local FAQ fallback when API unreachable</li>
+        </ul>
+      </div>
+      <div class="dual-card">
+        <div class="dual-card__title">Governance Architecture</div>
+        <ul class="dual-list">
+          <li>Append-only audit trails — every decision recorded</li>
+          <li>Row-Level Security — client data isolation at the database</li>
+          <li>Human-in-the-loop gating with configurable thresholds</li>
+          <li>Compliance readiness: ABA 512, SOC 2, ISO 42001</li>
+          <li>Full lineage from input to output</li>
+        </ul>
+      </div>
+      <div class="dual-card">
+        <div class="dual-card__title">Provider Resilience</div>
+        <ul class="dual-list">
+          <li>LLM provider abstraction — one interface, multiple backends</li>
+          <li>Automatic fallback on auth errors</li>
+          <li>Per-function provider overrides for cost optimization</li>
+          <li>DeepSeek for cost (~10x cheaper), Anthropic for quality</li>
+          <li>Pricing tables with per-model token cost calculation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TECH STACK ====== -->
+  <section>
+    <div class="section-label" style="color:var(--text-muted);">Infrastructure</div>
+    <div class="section-title">Technology Stack</div>
+
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-card__title">Backend</div>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">Uvicorn</span><span class="tag">Python 3.12+</span><span class="tag">Pydantic</span><span class="tag">Celery</span><span class="tag">asyncpg</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Frontend</div>
+        <div class="tags"><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Playwright</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Database</div>
+        <div class="tags"><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">RLS</span><span class="tag">Redis</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">AI / LLM</div>
+        <div class="tags"><span class="tag">Claude (Anthropic)</span><span class="tag">DeepSeek V3</span><span class="tag">Gemini</span><span class="tag">Voyage AI</span><span class="tag">ElevenLabs</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Deploy</div>
+        <div class="tags"><span class="tag">Fly.io</span><span class="tag">Vercel</span><span class="tag">Railway</span><span class="tag">Cloudflare</span><span class="tag">GitHub Pages</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card__title">Dev Tools</div>
+        <div class="tags"><span class="tag">Claude Code</span><span class="tag">GitHub Actions</span><span class="tag">Obsidian</span><span class="tag">Monday.com</span><span class="tag">Neo4j</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <div class="contact">
+    <div class="contact-title">Demos available on request</div>
+    <div class="contact-sub">Most platforms are deployed behind authentication. I can walk through any of them live — AESOP, Legal-OS, Thesis, SuperAssistant, or the contract review system.</div>
+    <div class="contact-links">
+      <a href="mailto:charlie@fuller.bot" class="contact-link">charlie@fuller.bot</a>
+      <a href="https://www.linkedin.com/in/charlie-fuller/" class="contact-link">LinkedIn</a>
+      <a href="https://github.com/motorthings" class="contact-link">GitHub</a>
+      <a href="diagrams/" class="contact-link">Visual Explainers</a>
+    </div>
+  </div>
+
+  <!-- ====== PRINCIPLES ====== -->
+  <div class="principles">
+    <p class="principles-quote">"Governance-first. Deterministic over LLM. The audit trail is the product."</p>
+    <div class="principles-list">
+      <span class="principle">Multi-agent evaluation</span>
+      <span class="principle">Append-only audit trails</span>
+      <span class="principle">HITL gating</span>
+      <span class="principle">Provider abstraction</span>
+      <span class="principle">Structured logging</span>
+      <span class="principle">Automated testing</span>
+      <span class="principle">Visual documentation</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
