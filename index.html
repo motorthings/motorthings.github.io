@@ -313,12 +313,12 @@ section { margin-bottom:40px; }
   <!-- ====== HERO ====== -->
   <div class="hero">
     <div class="hero-kicker">Charlie Fuller</div>
-    <h1>AI platforms <span class="accent">that ship</span></h1>
-    <p class="hero-sub">I build multi-agent systems, evaluation engines, and governed AI platforms. 6 production platforms, 50+ agents, 1,050+ tests, and 132 visual explainers — deployed across Fly.io, Railway, Vercel, and Supabase.</p>
+    <h1>I build AI that <span class="accent">organizations trust</span></h1>
+    <p class="hero-sub">Not demos. Production platforms that evaluate AI agents, govern legal workflows, and automate operations — deployed to real users, backed by 1,050+ tests and 132 visual explainers.</p>
     <div class="hero-links">
-      <a href="#work" class="hero-link hero-link--primary">See the work ↓</a>
-      <a href="diagrams/portfolio-full-showcase.html" class="hero-link">Full showcase →</a>
-      <a href="diagrams/" class="hero-link">Visual explainers →</a>
+      <a href="#work" class="hero-link hero-link--primary">See the work</a>
+      <a href="diagrams/portfolio-full-showcase.html" class="hero-link">Full portfolio</a>
+      <a href="diagrams/" class="hero-link">Visual explainers</a>
     </div>
   </div>
 
@@ -328,334 +328,99 @@ section { margin-bottom:40px; }
     <div class="mega-stat"><div class="mega-stat__value">50+</div><div class="mega-stat__label">AI Agents</div></div>
     <div class="mega-stat"><div class="mega-stat__value">1,050+</div><div class="mega-stat__label">Tests</div></div>
     <div class="mega-stat"><div class="mega-stat__value">132</div><div class="mega-stat__label">Explainers</div></div>
+    <div class="mega-stat"><div class="mega-stat__value">4</div><div class="mega-stat__label">Domains</div></div>
     <div class="mega-stat"><div class="mega-stat__value">100+</div><div class="mega-stat__label">API Routes</div></div>
-    <div class="mega-stat"><div class="mega-stat__value">76</div><div class="mega-stat__label">DB Migrations</div></div>
   </div>
 
   <!-- ====== 1. AESOP ====== -->
   <section id="work">
-    <div class="section-label" style="color:var(--aesop);">Platform 1</div>
+    <div class="section-label" style="color:var(--aesop);">AI Evaluation</div>
     <div class="section-title">AESOP Transformation OS</div>
-    <div class="section-body">Full-lifecycle AI agent development platform. <strong>Discover → Design → Build → Evaluate → Repair → Track.</strong> The evaluation engine that powers independent AI assessment across multiple platforms.</div>
-
-    <div class="platform platform--aesop">
-      <div class="platform-header">
-        <span class="platform-num">50 agents · 75 API routes · 76 migrations · ~990 tests</span>
-      </div>
-      <div class="platform-title">The Evaluation Engine</div>
-      <div class="platform-sub">The hardest problem in AI: <strong>how do you evaluate an AI agent when the agent cannot be trusted to self-assess?</strong> AESOP answers with 20+ specialized evaluation agents, each scoring a different dimension — then a programmatic scoring engine applies weighted tiers, veto rules, and certification levels. No LLM self-assessment. Every score is auditable.</div>
-
-      <div class="stat-row">
-        <span class="stat-pill">20+ evaluation agents</span>
-        <span class="stat-pill">6-stage pipeline</span>
-        <span class="stat-pill">Scoring: 4 dimensions + veto</span>
-        <span class="stat-pill">Cave of Shadows (red-team)</span>
-        <span class="stat-pill">The Hydra (parallelized swarm)</span>
-        <span class="stat-pill">Bias Probe (differential testing)</span>
-        <span class="stat-pill">Sentinel (QA test gen)</span>
-        <span class="stat-pill">Drift Detection (6 types)</span>
-        <span class="stat-pill">RAG Help System (pgvector)</span>
-        <span class="stat-pill">Custom Rubric engine</span>
-        <span class="stat-pill">Black Box Investigation</span>
-        <span class="stat-pill">Forge Repair agent</span>
-      </div>
-
-      <div class="key-points">
-        <div class="key-point">6-stage pipeline from discovery through production monitoring</div>
-        <div class="key-point">Scoring engine: Tier 1 (1.5×) + Tier 2 (1.0×), hard veto at 75</div>
-        <div class="key-point">Cave of Shadows: adversarial red-team with attack personas</div>
-        <div class="key-point">Hydra: parallelized swarm running dozens of test scenarios simultaneously</div>
-        <div class="key-point">Bias Probe: paired differential testing detecting treatment disparity</div>
-        <div class="key-point">Sentinel: generates dual-output QA test plans from evaluation results</div>
-        <div class="key-point">Drift Detection: 6 drift types, weekly sweeps, severity alerts</div>
-        <div class="key-point">Build pipeline: 6-phase automated agent generation with HITL checkpoint</div>
-        <div class="key-point">Portfolio layer: department Kanban, strategic prioritization agent, CSV imports</div>
-        <div class="key-point">Monday.com integration: MCP client, direct PRD endpoint, argument mapping</div>
-        <div class="key-point">Backend: FastAPI + Supabase + Celery | Frontend: Next.js 16 + TypeScript</div>
-        <div class="key-point">Deployed: Fly.io + Vercel | ~990 tests passing</div>
-      </div>
+    <div class="section-body">The core problem in enterprise AI isn't building agents — it's <strong>knowing whether they work</strong>. AESOP is a full-lifecycle platform that discovers, builds, evaluates, and monitors AI agents. Its evaluation engine uses 20+ independent scorers because a model can't grade its own homework. Deployed across two organizations, ported to legal, used to evaluate Harvey AI at an AmLaw 50 firm.</div>
+    <div class="platform platform--aesop" style="text-align:center;padding:20px 32px 24px;">
+      <a href="diagrams/portfolio/aesop-platform-overview.html" style="font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--aesop);text-decoration:none;border:1px solid var(--aesop-dim);padding:8px 20px;border-radius:6px;">See the platform →</a>
     </div>
   </section>
 
   <!-- ====== 2. LEGAL AI OS ====== -->
   <section>
-    <div class="section-label" style="color:var(--legal);">Platform 2</div>
+    <div class="section-label" style="color:var(--legal);">Legal AI</div>
     <div class="section-title">Legal AI Operating System</div>
-    <div class="section-body">A governed platform for building, deploying, measuring, and independently evaluating AI across the legal enterprise. <strong>Built for the K&I Program Manager role at Ashurst Perkins Coie.</strong></div>
-
-    <div class="platform platform--legal">
-      <div class="platform-header">
-        <span class="platform-num">9 functions · 10 API routes · 9 migrations · 62 tests</span>
-      </div>
-      <div class="platform-title">Governance Architecture + Harvey Monitoring</div>
-      <div class="platform-sub">Five-layer operating model: Knowledge Foundation → Governance & Trust → AI Functions → Program Operations → Organizational Model. The breakthrough: <strong>independent Harvey agent evaluation</strong> — ported from the AESOP scoring engine, adapted for legal outputs. Harvey can't grade its own homework. Legal-OS does.</div>
-
-      <div class="stat-row">
-        <span class="stat-pill">9 AI functions deployed</span>
-        <span class="stat-pill">Harvey Agent Monitoring</span>
-        <span class="stat-pill">4-dim evaluation (ported from AESOP)</span>
-        <span class="stat-pill">ROI Framework: time × rate</span>
-        <span class="stat-pill">POC Pipeline (Kanban)</span>
-        <span class="stat-pill">Agentic Help System (RAG)</span>
-        <span class="stat-pill">Portfolio Dashboard</span>
-        <span class="stat-pill">Enablement Kit (7 docs)</span>
-        <span class="stat-pill">RLS client isolation</span>
-        <span class="stat-pill">ABA 512 compliance ready</span>
-      </div>
-
-      <div class="key-points">
-        <div class="key-point">5-layer architecture: Knowledge, Governance, Functions, Operations, Org Model</div>
-        <div class="key-point">Harvey evaluation: external agents pulled in, 4 parallel scorers, weighted + veto</div>
-        <div class="key-point">ROI Framework: cost avoided = time saved × billable rate from rate cards</div>
-        <div class="key-point">POC Pipeline: Kanban board — Discovery → Build → Review → Graduated/Cancelled</div>
-        <div class="key-point">Agentic help system: Voyage embeddings → pgvector → RAG answers (89 chunks)</div>
-        <div class="key-point">Audit trail: append-only, immutable, every LLM call recorded</div>
-        <div class="key-point">Provider resilience: tries Anthropic first, auto-falls-back to DeepSeek</div>
-        <div class="key-point">Backend: FastAPI + Supabase + Celery | Frontend: Next.js 16 + TypeScript</div>
-        <div class="key-point">Deployed: Fly.io + Vercel | 52 backend + 18 E2E tests passing</div>
-        <div class="key-point">Matter Intake Evaluator: standalone AI-powered legal matter triage (Perkins Coie demo)</div>
-      </div>
+    <div class="section-body">A governed platform for legal AI adoption — <strong>built for the K&I Program Manager role at Ashurst Perkins Coie</strong>. Five-layer architecture: knowledge foundation, governance framework, AI functions, program operations, organizational model. The breakthrough is independent Harvey agent monitoring: external evaluators score Harvey's legal outputs across four dimensions. Harvey can't grade itself. This platform does.</div>
+    <div class="platform platform--legal" style="text-align:center;padding:20px 32px 24px;">
+      <a href="diagrams/portfolio-full-showcase.html" style="font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--legal);text-decoration:none;border:1px solid var(--legal-dim);padding:8px 20px;border-radius:6px;">See the platform →</a>
     </div>
   </section>
 
   <!-- ====== 3. TBG / SUPERASSISTANT ====== -->
   <section>
-    <div class="section-label" style="color:var(--tbg);">Platform 3 &amp; 4</div>
-    <div class="section-title">SuperAssistant &amp; TSE — Voice + Workflow AI</div>
-    <div class="section-body">AI assistant platform for The Bradbury Group. <strong>Voice interview pipeline, email automation, and workflow orchestration</strong> — serverless architecture across Railway, Supabase, and ElevenLabs.</div>
+    <div class="section-label" style="color:var(--tbg);">Voice & Workflow AI</div>
+    <div class="section-title">SuperAssistant &amp; TSE</div>
+    <div class="section-body">AI assistant platforms for The Bradbury Group — a consulting firm using AI operationally, not experimentally. <strong>Voice interview pipeline that configures an executive assistant in 5 minutes.</strong> Email triage automation. L&D cohort management. Matter intake evaluation for Perkins Coie. These aren't proofs of concept — they run the business.</div>
+    <div class="platform platform--tbg" style="text-align:center;padding:20px 32px 24px;">
+      <a href="diagrams/portfolio-full-showcase.html" style="font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--tbg);text-decoration:none;border:1px solid var(--tbg-dim);padding:8px 20px;border-radius:6px;">See the platform →</a>
+    </div>
+  </section>
 
+  <!-- ====== 4. STRATEGY & VISUALIZATION ====== -->
+  <section>
+    <div class="section-label" style="color:var(--automation);">Strategy & Visualization</div>
+    <div class="section-title">Thesis + Visual Explainers</div>
+    <div class="section-body"><strong>Thesis:</strong> A multi-agent strategy platform where 21 specialized agents don't just answer — they discuss. Autonomous meeting rooms, Neo4j stakeholder graphs, Mem0 persistent memory. <strong>Visual explainers:</strong> 132 self-contained HTML pages — architecture diagrams, maturity models, process maps, audit reports — spanning every project. No frameworks, no build step, instant render.</div>
+    <div class="platform platform--auto" style="text-align:center;padding:20px 32px 24px;">
+      <a href="diagrams/" style="font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--automation);text-decoration:none;border:1px solid var(--automation-dim);padding:8px 20px;border-radius:6px;">Browse 132 explainers →</a>
+    </div>
+  </section>
+
+  <!-- ====== HOW I WORK ====== -->
+  <section>
+    <div class="section-label" style="color:var(--text-muted);">How I Work</div>
+    <div class="section-title">Governance-first. Deterministic over LLM.</div>
+    <div class="section-body">These aren't buzzwords. They're architectural commitments that appear in every platform.</div>
     <div class="dual">
       <div class="dual-card">
-        <div class="dual-card__title">SuperAssistant MVP</div>
+        <div class="dual-card__title">Independent evaluation</div>
         <ul class="dual-list">
-          <li>Executive AI assistant configured through 5-minute voice interview</li>
-          <li>RAG-powered with Claude + ElevenLabs</li>
-          <li>39 API route files across backend</li>
-          <li>Multi-tenant architecture on Railway + Supabase</li>
-          <li>Structured output pipelines for agent orchestration</li>
-        </ul>
-      </div>
-      <div class="dual-card">
-        <div class="dual-card__title">TSE — Voice Interview Pipeline</div>
-        <ul class="dual-list">
-          <li>Serverless voice interviews via ElevenLabs</li>
-          <li>Structured question flow with branching logic</li>
-          <li>Real-time transcription + analysis</li>
-          <li>Deployed on Railway + Supabase</li>
-          <li>Fully automated end-to-end interview pipeline</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="platform platform--tbg" style="margin-top:16px;">
-      <div class="platform-title">TBG Automations</div>
-      <div class="platform-sub">Operational AI for a consulting firm — turning manual workflows into automated pipelines.</div>
-      <div class="key-points">
-        <div class="key-point">L&D Cohort Automation: end-to-end training program automation through Sprint 9</div>
-        <div class="key-point">Gmail Automation: AI email triage using Gemini + Gmail API</div>
-        <div class="key-point">System Instructions: central source of truth for all TBG AI system instructions</div>
-        <div class="key-point">Ecosystem Map: operational overview of all Railway/Vercel/Supabase/Cloudflare deployments</div>
-        <div class="key-point">Walter: fully TBG-owned AI assistant, deployed and operational</div>
-        <div class="key-point">Matter Intake Evaluator: standalone AI legal triage for Perkins Coie</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== 4. THESIS ====== -->
-  <section>
-    <div class="section-label" style="color:var(--automation);">Platform 5</div>
-    <div class="section-title">Thesis — Multi-Agent Strategy Platform</div>
-    <div class="section-body">A GenAI strategy platform with <strong>21 specialized agents, autonomous discussion rooms, Neo4j stakeholder graphs, and Mem0 memory</strong> — the most architecturally complex project in the portfolio.</div>
-
-    <div class="platform platform--auto">
-      <div class="platform-header">
-        <span class="platform-num">21 agents · Neo4j + Mem0 · Meeting Room · Stakeholder Graphs</span>
-      </div>
-      <div class="platform-title">Autonomous Strategy Generation</div>
-      <div class="platform-sub">Agents don't just answer — they <strong>discuss</strong>. The Meeting Room runs autonomous multi-agent discussions where specialized agents debate, challenge, and synthesize strategy. Stakeholder graphs map organizational power structures. Mem0 provides persistent memory across sessions.</div>
-
-      <div class="stat-row">
-        <span class="stat-pill">21 specialized agents</span>
-        <span class="stat-pill">Neo4j stakeholder graphs</span>
-        <span class="stat-pill">Mem0 persistent memory</span>
-        <span class="stat-pill">Autonomous meeting room</span>
-        <span class="stat-pill">Multi-agent discussion</span>
-        <span class="stat-pill">Backend: Fly.io</span>
-        <span class="stat-pill">Frontend: Vercel</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== 5. DIAGRAMS & VISUAL COMMUNICATION ====== -->
-  <section>
-    <div class="section-label" style="color:var(--diagrams);">Visual Communication</div>
-    <div class="section-title">132 Visual Explainers</div>
-    <div class="section-body">Self-contained HTML pages — architecture diagrams, maturity models, process maps, audit reports, platform showcases — spanning every project. <strong>No frameworks. No build step. Just hand-built HTML + CSS that renders instantly.</strong></div>
-
-    <div class="platform platform--diagrams">
-      <div class="stat-row">
-        <span class="stat-pill">30 AESOP diagrams</span>
-        <span class="stat-pill">19 Legal OS diagrams</span>
-        <span class="stat-pill">TBG architecture & audits</span>
-        <span class="stat-pill">Monday.com pipeline (6 stages)</span>
-        <span class="stat-pill">Executive one-pagers</span>
-        <span class="stat-pill">Maturity models</span>
-        <span class="stat-pill">Platform showcases</span>
-        <span class="stat-pill">Process flowcharts</span>
-        <span class="stat-pill">Dark/light theme on every page</span>
-        <span class="stat-pill">Mermaid integration</span>
-      </div>
-      <div class="key-points">
-        <div class="key-point"><a href="diagrams/" style="color:var(--diagrams);text-decoration:underline;">Browse the gallery →</a> — 132 visual explainers, live at motorthings.github.io/diagrams</div>
-        <div class="key-point"><a href="diagrams/portfolio-full-showcase.html" style="color:var(--diagrams);text-decoration:underline;">Full portfolio showcase →</a> — every platform in detail</div>
-        <div class="key-point">Custom visual-explainer skill: 4 templates, 3 rendering approaches, responsive design</div>
-        <div class="key-point">Mermaid integration: flowcharts, sequence, ER, state machines, mind maps</div>
-        <div class="key-point">Dark/light theme support on every page with persisted preference</div>
-        <div class="key-point">Executive, technical, and operational views for every platform</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== 6. SKILLS & AGENTS ====== -->
-  <section>
-    <div class="section-label" style="color:var(--skills);">AI Skills &amp; Agents</div>
-    <div class="section-title">Custom Claude Infrastructure</div>
-    <div class="section-body">Skills, agents, and tools that extend Claude Code into a <strong>specialized development and analysis environment</strong> — each with defined prompts, knowledge bases, and evaluation criteria.</div>
-
-    <div class="cap-grid">
-      <div class="cap-card">
-        <div class="cap-card__title">Visual Explainer Skill</div>
-        <div class="cap-card__desc">Generates self-contained HTML diagrams. 4 template types, 7 aesthetic palettes, Mermaid + CSS + Chart.js. The skill that built all 132 explainers.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">PRD Skill</div>
-        <div class="cap-card__desc">Socratic discovery across 4 depth levels, 7 phases, 6 reference files. Generates complete PRDs from structured interviews.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Transcript Analysis</div>
-        <div class="cap-card__desc">Transforms meeting transcripts into structured discovery reports. Explicit + implicit signal detection. Stakeholder mapping.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Brand Voice</div>
-        <div class="cap-card__desc">Edgy, brutal-honest, poetic style. Tension/release rhythm. Applied to LinkedIn content, professional writing, and platform copy.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Thinking Partner Agent</div>
-        <div class="cap-card__desc">Socratic reasoning partner. Challenges assumptions. Maps trade-offs. Structured decision analysis.</div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">15+ Specialized Agents</div>
-        <div class="cap-card__desc">Research assistant, interviewer, daily summarizer, chat archiver, project triage, career guidance, and more.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== PATTERNS ====== -->
-  <section>
-    <div class="section-label" style="color:var(--text-muted);">Cross-Cutting</div>
-    <div class="section-title">Patterns That Span Every Project</div>
-    <div class="section-body">These patterns appear across every platform — they're not one-off implementations but <strong>reusable architectural primitives</strong> ported between projects.</div>
-
-    <div class="dual">
-      <div class="dual-card">
-        <div class="dual-card__title">Multi-Agent Evaluation</div>
-        <ul class="dual-list">
-          <li><strong>Built in AESOP, ported to Legal-OS</strong></li>
-          <li>Parallel evaluator agents — each scores a different dimension</li>
-          <li>Programmatic scoring engine — never trusts LLM self-assessment</li>
+          <li>Agents evaluated by other agents, not themselves</li>
+          <li>Programmatic scoring — no LLM self-assessment ever</li>
           <li>Weighted tiers + hard veto + certification levels</li>
-          <li>Drift detection with baseline comparison and severity alerts</li>
         </ul>
       </div>
       <div class="dual-card">
-        <div class="dual-card__title">RAG Help Systems</div>
+        <div class="dual-card__title">Audit everything</div>
         <ul class="dual-list">
-          <li><strong>Built in both AESOP and Legal-OS</strong></li>
-          <li>Voyage AI embeddings → pgvector similarity search</li>
-          <li>LLM-generated answers with source references</li>
-          <li>Slide-out chat panel with suggested questions</li>
-          <li>Local FAQ fallback when API unreachable</li>
+          <li>Append-only logs — every decision traceable</li>
+          <li>Row-level security at the database layer</li>
+          <li>Human-in-the-loop gates on high-stakes actions</li>
         </ul>
       </div>
       <div class="dual-card">
-        <div class="dual-card__title">Governance Architecture</div>
+        <div class="dual-card__title">No vendor lock-in</div>
         <ul class="dual-list">
-          <li>Append-only audit trails — every decision recorded</li>
-          <li>Row-Level Security — client data isolation at the database</li>
-          <li>Human-in-the-loop gating with configurable thresholds</li>
-          <li>Compliance readiness: ABA 512, SOC 2, ISO 42001</li>
-          <li>Full lineage from input to output</li>
+          <li>Provider abstraction — swap models without rewriting</li>
+          <li>Automatic fallback on auth or rate-limit failures</li>
+          <li>Anthropic for quality, DeepSeek for cost (~10× cheaper)</li>
         </ul>
       </div>
       <div class="dual-card">
-        <div class="dual-card__title">Provider Resilience</div>
+        <div class="dual-card__title">Ship with evidence</div>
         <ul class="dual-list">
-          <li>LLM provider abstraction — one interface, multiple backends</li>
-          <li>Automatic fallback on auth errors</li>
-          <li>Per-function provider overrides for cost optimization</li>
-          <li>DeepSeek for cost (~10x cheaper), Anthropic for quality</li>
-          <li>Pricing tables with per-model token cost calculation</li>
+          <li>1,050+ automated tests across all platforms</li>
+          <li>Structured JSONL logging on every backend</li>
+          <li>Every platform has a visual explainer explaining it</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== TECH STACK ====== -->
-  <section>
-    <div class="section-label" style="color:var(--text-muted);">Infrastructure</div>
-    <div class="section-title">Technology Stack</div>
-
-    <div class="cap-grid">
-      <div class="cap-card">
-        <div class="cap-card__title">Backend</div>
-        <div class="tags"><span class="tag">FastAPI</span><span class="tag">Uvicorn</span><span class="tag">Python 3.12+</span><span class="tag">Pydantic</span><span class="tag">Celery</span><span class="tag">asyncpg</span></div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Frontend</div>
-        <div class="tags"><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Playwright</span></div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Database</div>
-        <div class="tags"><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">RLS</span><span class="tag">Redis</span></div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">AI / LLM</div>
-        <div class="tags"><span class="tag">Claude (Anthropic)</span><span class="tag">DeepSeek V3</span><span class="tag">Gemini</span><span class="tag">Voyage AI</span><span class="tag">ElevenLabs</span></div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Deploy</div>
-        <div class="tags"><span class="tag">Fly.io</span><span class="tag">Vercel</span><span class="tag">Railway</span><span class="tag">Cloudflare</span><span class="tag">GitHub Pages</span></div>
-      </div>
-      <div class="cap-card">
-        <div class="cap-card__title">Dev Tools</div>
-        <div class="tags"><span class="tag">Claude Code</span><span class="tag">GitHub Actions</span><span class="tag">Obsidian</span><span class="tag">Monday.com</span><span class="tag">Neo4j</span></div>
       </div>
     </div>
   </section>
 
   <!-- ====== CONTACT ====== -->
   <div class="contact">
-    <div class="contact-title">Demos available on request</div>
-    <div class="contact-sub">Most platforms are deployed behind authentication. I can walk through any of them live — AESOP, Legal-OS, Thesis, SuperAssistant, or the contract review system.</div>
+    <div class="contact-title">Demos available</div>
+    <div class="contact-sub">Every platform is deployed and running. I can walk through any of them live — AESOP, Legal-OS, Thesis, SuperAssistant, or the contract review system.</div>
     <div class="contact-links">
       <a href="mailto:charlie@fuller.bot" class="contact-link">charlie@fuller.bot</a>
       <a href="https://www.linkedin.com/in/charlie-fuller/" class="contact-link">LinkedIn</a>
       <a href="https://github.com/motorthings" class="contact-link">GitHub</a>
-      <a href="diagrams/" class="contact-link">Visual Explainers</a>
-    </div>
-  </div>
-
-  <!-- ====== PRINCIPLES ====== -->
-  <div class="principles">
-    <p class="principles-quote">"Governance-first. Deterministic over LLM. The audit trail is the product."</p>
-    <div class="principles-list">
-      <span class="principle">Multi-agent evaluation</span>
-      <span class="principle">Append-only audit trails</span>
-      <span class="principle">HITL gating</span>
-      <span class="principle">Provider abstraction</span>
-      <span class="principle">Structured logging</span>
-      <span class="principle">Automated testing</span>
-      <span class="principle">Visual documentation</span>
     </div>
   </div>
 
