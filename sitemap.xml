@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sickofancy.ai/</loc>
+    <lastmod>2026-09-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -11,17 +12,12 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop/aesop-architecture.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sickofancy.ai/diagrams/aesop/aesop-cave-of-shadows.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -36,7 +32,12 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop/aesop-current-vs-langgraph.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/aesop/aesop-determinism.html</loc>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -45,8 +46,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sickofancy.ai/diagrams/aesop/aesop-hydra-process-map.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://sickofancy.ai/diagrams/aesop/aesop-humane-eval.html</loc>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -85,8 +86,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sickofancy.ai/diagrams/aesop/aesop-praxis-thesis.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://sickofancy.ai/diagrams/aesop/aesop-red-team.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/aesop/aesop-sounds-like-ai.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -101,12 +107,17 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop/aesop-togaf-core.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop/aesop-togaf-mapping.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/aesop/aesop-trace-analysis.html</loc>
+    <lastmod>2026-09-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -116,7 +127,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop/aesop-ux-audit.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -156,7 +167,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/aesop/linkedin-series-trajectory.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -186,22 +197,22 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/apc-four-mandates.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/apc-jd-alignment.html</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/apc/gwyn/aba-512-architectural-controls.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/apc/gwyn/aesop-evaluation-lifecycle.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -212,6 +223,16 @@
   <url>
     <loc>https://sickofancy.ai/diagrams/apc/gwyn/roi-measurement-framework.html</loc>
     <lastmod>2026-09-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/archive/aesop-hydra-process-map.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/archive/aesop-hydra.html</loc>
+    <lastmod>2026-09-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -341,7 +362,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/legal/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -417,6 +438,11 @@
   <url>
     <loc>https://sickofancy.ai/diagrams/legal/legal-descrybe-integration.html</loc>
     <lastmod>2026-09-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/legal/legal-descrybe-paths.html</loc>
+    <lastmod>2026-09-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -671,17 +697,17 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio-full-showcase.html</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-architecture.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -690,13 +716,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sickofancy.ai/diagrams/portfolio/aesop-cave-of-shadows.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-custom-test-suite.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -705,13 +726,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sickofancy.ai/diagrams/portfolio/aesop-hydra.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-investigation.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -726,7 +742,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-pipeline.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -737,6 +753,11 @@
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-portfolio.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sickofancy.ai/diagrams/portfolio/aesop-red-team.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -756,17 +777,17 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-studio-showcase.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-tech-agents.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/portfolio/aesop-trace-analysis.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -816,7 +837,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/tbg/aesop-onboarding-flow.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -886,7 +907,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/writing/linkedin-series-trajectory.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -921,7 +942,7 @@
   </url>
   <url>
     <loc>https://sickofancy.ai/diagrams/writing/post-7-line.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
