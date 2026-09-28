@@ -361,8 +361,8 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap;font-weight:700}
         </div>
         <p class="contact">Hiring, or just want to talk? <a href="mailto:charlie@waifinder.org">charlie@waifinder.org</a>, <a href="https://www.linkedin.com/in/charlie-fuller-colorado/">LinkedIn</a> or <a href="https://github.com/motorthings">GitHub</a>.</p>
       </div>
-      <!-- FORM_ENDPOINT: set action to a Formspree URL (e.g. https://formspree.io/f/xxxx) to post instead of opening email. Empty = mailto fallback. -->
-      <form id="apply-form" action="" method="POST">
+      <!-- FORM_ENDPOINT: Formspree. Clearing the action falls back to opening a pre-filled email. -->
+      <form id="apply-form" action="https://formspree.io/f/xzezydyo" method="POST">
         <div class="pair">
           <label><span>Name</span><input name="name" required autocomplete="name"></label>
           <label><span>Work email</span><input name="email" type="email" required autocomplete="email"></label>
@@ -370,6 +370,7 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap;font-weight:700}
         <label><span>Organization</span><input name="organization" autocomplete="organization"></label>
         <label><span>What's your case?</span><textarea name="case" rows="4" required placeholder="What agent are you testing, what does good look like, and who will review the scores?"></textarea></label>
         <input type="hidden" name="_subject" value="AESOP beta application">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <button class="btn" type="submit">Send application</button>
         <p class="fine">I read every application myself. If it's a fit, you'll hear from me within a few days.</p>
       </form>
@@ -402,12 +403,19 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap;font-weight:700}
     e.preventDefault();
     var d=new FormData(form);
     if(form.getAttribute('action')){
+      var btn=form.querySelector('button[type=submit]'), label=btn.textContent;
+      btn.disabled=true; btn.textContent='Sending\u2026';
+      function done(){btn.disabled=false; btn.textContent=label;}
       fetch(form.action,{method:'POST',body:d,headers:{Accept:'application/json'}}).then(function(r){
         if(!r.ok) throw 0;
         document.getElementById('sent-title').textContent='Application received.';
         document.getElementById('sent-body').innerHTML='I\u2019ll read your case and reply within a few days. Anything to add? Write to <a href="mailto:charlie@waifinder.org">charlie@waifinder.org</a>.';
-        form.reset(); show(true);
-      }).catch(function(){alert('That didn\u2019t send. Please email charlie@waifinder.org instead.');});
+        form.reset(); done(); show(true);
+      }).catch(function(){
+        document.getElementById('sent-title').textContent='That didn\u2019t send.';
+        document.getElementById('sent-body').innerHTML='Something went wrong on the way, and your answers are still here. Try again, or write to <a href="mailto:charlie@waifinder.org">charlie@waifinder.org</a> and I\u2019ll pick it up there.';
+        done(); show(true);
+      });
       return;
     }
     var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nOrganization: '+d.get('organization')+'\n\nMy case:\n'+d.get('case');
